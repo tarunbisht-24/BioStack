@@ -1,225 +1,7 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 
-<style>
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--ff-body);
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  background-color: beige;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--ff-heading);
-  font-weight: 600;
-}
-
-h5,
-h6 {
-  font-weight: 400;
-}
-
-.container {
-  position: relative;
-  width: min(100% - 2rem, 79rem);
-  margin-inline: auto;
-  padding-block: 2rem;
-}
-
-p {
-  font-size: 1.125rem;
-  margin-bottom: 1.2rem;
-  line-height: 2em;
-}
-
-article.sample-col-para {
-  margin-inline: auto;
-  -moz-column-width: 350px;
-       column-width: 350px;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  -moz-column-rule: 1px solid #5b5b5d;
-       column-rule: 1px solid #5b5b5d;
-}
-article.sample-col-para h1 {
-  font-size: 56px;
-  margin-bottom: 1rem;
-  line-height: 1.2em;
-}
-article.sample-col-para h3 {
-  opacity: 0.7;
-  margin-bottom: 1rem;
-}
-article.sample-col-para img {
-  width: 200px;
-  height: 200px;
-  float: right;
-  margin-left: 1.2rem;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  shape-outside: circle();
-  border: 5px solid rgb(164, 67, 31);
-}
-
-.mb-5 {
-  margin-bottom: 5rem;
-}
-
-.mt-5 {
-  margin-top: 5rem;
-}
-
-.marquee-wrapper {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  gap: 1rem;
-  border-radius: 1rem;
-}
-.marquee-wrapper .marquee-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 1rem;
-  cursor: grab;
-}
-.marquee-wrapper .marquee-content .card-testimonial {
-  max-width: 400px;
-  background-color: #10672d;
-  padding: 1rem;
-  border-radius: 1rem;
-  color: #f5f5f5;
-}
-.marquee-wrapper .marquee-content .card-testimonial article picture {
-  position: relative;
-  min-width: 200px;
-}
-.marquee-wrapper .marquee-content .card-testimonial article picture img {
-  width: 100%;
-  height: 340px;
-  border-radius: 0.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 15%;
-     object-position: 50% 15%;
-}
-.marquee-wrapper .marquee-content .card-testimonial article h4 {
-  font-size: 20px;
-  text-transform: capitalize;
-  margin-block: 1rem;
-}
-.marquee-wrapper .marquee-content .card-testimonial article article.short-description p {
-  font-family: var(--ff-heading);
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 20px;
-  margin-bottom: 1.2rem;
-}
-@media (max-width: 1024px) {
-  .marquee-wrapper {
-    overflow: auto;
-  }
-}
-
-.scrollingX {
-  animation: scroll 45s linear infinite;
-}
-
-.marquee-wrapper:hover .scrollingX {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - 1rem));
-  }
-}/*# sourceMappingURL=styles.css.map */
-</style>
 <head>
 
   <!-- Basic Page Needs
@@ -248,6 +30,218 @@ article.sample-col-para img {
   <!--Favicon-->
   <link rel="icon" href="images/Frame_removebg 1.png" type="image/x-icon">
 
+  <style>
+
+
+
+/* Utility stylings */
+
+:root{
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: #16702d;
+    --gray: #ededed;
+}
+
+/* Utility stylings */
+img{
+    width: 100%;
+    display: block;
+}
+
+.lg-title,
+.md-title,
+.sm-title{
+    font-family: 'Muli', sans-serif;
+    padding: 0.6rem 0;
+    text-transform: capitalize;
+}
+.lg-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+}
+.md-title{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.sm-title{
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.text-light{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    opacity: 0.5;
+    margin: 0.4rem 0;
+}
+
+/* product section */
+.products{
+    background: var(--alice-blue);
+    padding: 3.2rem 0;
+}
+.products .text-light{
+    text-align: center;
+    width: 70%;
+    margin: 0.9rem auto;
+}
+.product{
+    margin: 2rem;
+    position: relative;
+}
+.product-content{
+    background: #10672d;
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+}
+.product-img{
+    background: var(--white-light);
+    box-shadow: 0 0 20px 10px var(--white-light);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+.product-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.btn-cart, .btn-buy{
+    background: transparent;
+    border: 1px solid black;
+    padding: 0.8rem 0;
+    width: 125px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+}
+.btn-cart{
+    background: black;
+    color: white;
+}
+.btn-cart:hover{
+    background: var(--carribean-green);
+}
+.btn-buy{
+    background: white;
+}
+.btn-buy:hover{
+    background: var(--carribean-green);
+    color: #fff;
+}
+.product-info{
+    background: white;
+    padding: 2rem;
+}
+.product-info-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating span{
+    color: var(--carribean-green);
+}
+.product-name{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.product-price{
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+.product-price:first-of-type{
+    text-decoration: line-through;
+    color: var(--carribean-green);
+}
+.product-img img{
+    transition: transform 0.6s ease;
+}
+.product:hover .product-img img{
+    transform: scale(1.1);
+}
+.product:hover .product-img{
+    background: var(--carribean-green);
+}
+.product:hover .product-btns{
+    opacity: 1;
+}
+.off-info .sm-title{
+    background: var(--carribean-green);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    z-index: 1;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.product-logo {
+  width: 45px;
+  height: 45px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-col-r-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .product-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .products .text-light{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1336px){
+    .product-items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .product-collection-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex{
+        height: 60vh;
+    }
+    .product-col-left{
+        height: 121.5vh;
+    }
+}
+    </style>
+
 </head>
 <body id="top-header">
 <!-- LOADER TEMPLATE -->
@@ -257,14 +251,14 @@ article.sample-col-para img {
 <!-- /LOADER TEMPLATE -->
 
 
-<!-- NAVBAR
-    ================================================= -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark trans-navigation fixed-top navbar-togglable">
   <div class="container">
-    <img src="images/logo.png" alt="Company Logo" width="45px" height="45px">
+    <img class="product-logo" src="images/logo.png" alt="Company Logo" width="45px" height="45px">
     <a class="navbar-brand" href="index.html">
-      <h3>BioStack</h3>
+        <h3>BioStack</h3>      
     </a>
+
     <!-- Toggler -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -280,10 +274,15 @@ article.sample-col-para img {
           <a href="about.html" class="nav-link js-scroll-trigger">
             About
           </a>
-        </li>
+        </li>   
         <li class="nav-item ">
           <a href="product.html" class="nav-link js-scroll-trigger">
             Our Products
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="applications.html" class="nav-link js-scroll-trigger">
+            Applications
           </a>
         </li>
         <li class="nav-item ">
@@ -291,9 +290,6 @@ article.sample-col-para img {
             Register
           </a>
         </li>
-
-        
-
         <li class="nav-item ">
           <a href="contact.html" class="nav-link">
             Contact
@@ -304,238 +300,184 @@ article.sample-col-para img {
   </div> <!-- / .container -->
 </nav>
 
-   <!-- HERO
-    ================================================== -->
-    <section class="page-banner-area page-service">
-        <div class="overlay"></div>
-        <!-- Content -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-12 col-12 text-center">
-                    <div class="page-banner-content">
-                        <h1 class="display-4 font-weight-bold">Services we provide</h1>
-                        <p>We'd love to talk about how we can help you.</p>
-                    </div>
-                </div>
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
-    </section>
+    <section class="section-bottom">
+    <div class = "products">
+      <div class = "container">
+          <div class = "product-items">
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/1.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
 
-<section class="section" id="service">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-7 pl-4 text-center">
-                    <div class="service-heading">
-                        <h1>Join us and start utilizing waste in the form of fuel</h1>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-block media">
-                        <div class="service-icon">
-                            <i class="ti-reload"></i>
-                        </div>
-                        <div class="service-inner-content media-body">
-                            <h4>Rehabiliate</h4>
-                            <p>Our team is dedicated to make use of unused biofeul products</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 mb-3 col-md-6">
-                    <div class="service-block media">
-                        <div class="service-icon">
-                            <i class="ti-cloud"></i>
-                        </div>
-                        <div class="service-inner-content media-body">
-                            <h4>Quality Biofuel</h4>
-                            <p>We ensure to provide best quality biofuel in best price</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 mb-3 col-md-6">
-                    <div class="service-block media ">
-                        <div class="service-icon">
-                            <i class="ti-world"></i>
-                        </div>
-                        <div class="service-inner-content media-body">
-                            <h4>Ingenious</h4>
-                            <p>The data that we have collected is from industries all over the world</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>   
-            
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="pl-3">Want to know more about this? <a href="contact.html">Contact us</a></p>
-                </div>
-            </div>    
-        </div>
-    </section>
-
-
-    <section class="section bg-grey" id="process">
-      <div class="container">
-          <div class="row justify-content-center mb-4">
-              <div class="col-md-8 col-lg-6 text-center">
-                  <div class="section-heading">
-                      <h2 class="section-title ">
-                          Our Products
-                      </h2>
-                      <p>
-                        Our products can be used in various fields of applications like
-                      </p>
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Sawdust Briquettes </a>
                   </div>
               </div>
-            </div>
-            <section class="container mb-5">
-              <div class="marquee-wrapper" style="user-select: none;">
-                <div class="marquee-content scrollingX">
-                    <div class="card-testimonial">
-                        <article>
-                            <picture>
-                                <source media="(min-width: 768px)" srcset="images/products/boilers.jpeg">
-                                <img src="images/products/boilers.jpeg" alt="sample-one.jpeg">
-                            </picture>
-                            <h4>Sample title only</h4>
-                            <article class="short-description">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nesciunt. Optio omnis
-                                    ducimus autem aperiam incidunt quae harum cumque animi suscipit dolor cupiditate culpa,
-                                    doloremque dolorem voluptas qui dignissimos repellat.</p>
-                            </article>
-                        </article>
-                    </div>
-                    <div class="card-testimonial">
-                      <article>
-                          <picture>
-                              <source media="(min-width: 768px)" srcset="images/products/night.jpeg">
-                              <img src="images/products/night.jpeg" alt="sample-one.jpeg">
-                          </picture>
-                          <h4>Sample title only</h4>
-                          <article class="short-description">
-                              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nesciunt. Optio omnis
-                                  ducimus autem aperiam incidunt quae harum cumque animi suscipit dolor cupiditate culpa,
-                                  doloremque dolorem voluptas qui dignissimos repellat.</p>
-                          </article>
-                      </article>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/2.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
                   </div>
-                    <div class="card-testimonial">
-                     <article>
-                        <picture>
-                            <source media="(min-width: 768px)" srcset="images/products/biogas.jpeg">
-                            <img src="images/products/biogas.jpeg" alt="sample-one.jpeg">
-                        </picture>
-                        <h4>Sample title only</h4>
-                        <article class="short-description">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nesciunt. Optio omnis
-                                ducimus autem aperiam incidunt quae harum cumque animi suscipit dolor cupiditate culpa,
-                                doloremque dolorem voluptas qui dignissimos repellat.</p>
-                        </article>
-                      </article>
-                    </div>
-                    <div class="card-testimonial">
-                     <article>
-                      <picture>
-                          <source media="(min-width: 768px)" srcset="images/products/industry.jpeg">
-                          <img src="images/products/industry.jpeg" alt="sample-one.jpeg">
-                      </picture>
-                      <h4>Sample title only</h4>
-                      <article class="short-description">
-                          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nesciunt. Optio omnis
-                              ducimus autem aperiam incidunt quae harum cumque animi suscipit dolor cupiditate culpa,
-                              doloremque dolorem voluptas qui dignissimos repellat.</p>
-                      </article>
-                     </article>
-                  </div>
-                  <div class="card-testimonial">
-                    <article>
-                     <picture>
-                         <source media="(min-width: 768px)" srcset="images/products/smoke.jpeg">
-                         <img src="images/products/smoke.jpeg" alt="sample-one.jpeg">
-                     </picture>
-                     <h4>Sample title only</h4>
-                     <article class="short-description">
-                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, nesciunt. Optio omnis
-                             ducimus autem aperiam incidunt quae harum cumque animi suscipit dolor cupiditate culpa,
-                             doloremque dolorem voluptas qui dignissimos repellat.</p>
-                     </article>
-                    </article>
-                 </div>
-              
-                </div>
-              </div>
-              </section>
 
-            
-
-          <!-- <div class="row justify-content-center">
-              <div class="col-lg-4 col-sm-6 col-md-6">
-                  <div class="process-block">
-                      <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-                      <h3>Boilers</h3>
-                      <p>Our pellets and briquettes are perfect for use in boilers because they are an effective fuel source and have a high energy density.
-                      </p>
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Groundnut Briquettes</a>
                   </div>
               </div>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/3.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
 
-              <div class="col-lg-4 col-sm-6 col-md-6">
-                <div class="process-block">
-                    <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-                    <h3>Power Generation</h3>
-                    <p>Biomass pellets are used in power plants to produce electricity through combustion or co-firing with coal. Biomass power generation helps reduce carbon emissions and contributes to renewable energy production.
-                      </p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 col-md-6">
-              <div class="process-block">
-                  <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-                  <h3>Cooking and Heating</h3>
-                  <p> In regions with limited access to modern energy sources, biomass pellets and briquettes are used for cooking and heating in households. They are a cleaner and more sustainable alter.
-                  </p>
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Mustard Briquettes</a>
+                  </div>
               </div>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/4.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Paddy Straw Briquettes</a>
+                  </div>
+              </div>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/6.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Rice Husk Briquette</a>
+                  </div>
+              </div>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/7.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Cow Dung Briquettes</a>
+                  </div>
+              </div>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/5.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Baggasse</a>
+                  </div>
+              </div>
+              <!-- end of single product -->
+              <!-- single product -->
+              <div class = "product">
+                  <div class = "product-content">
+                      <div class = "product-img">
+                          <img src = "images/products/8.png" alt = "product image">
+                      </div>
+                      <div class = "product-btns">
+                          <button type = "button" class = "btn-cart"> add to cart
+                              <span><i class = "fas fa-plus"></i></span>
+                          </button>
+                          <button type = "button" class = "btn-buy"> buy now
+                              <span><i class = "fas fa-shopping-cart"></i></span>
+                          </button>
+                      </div>
+                  </div>
+
+                  <div class = "product-info">
+                      <a href = "#" class = "product-name">Coconut Briquettes</a>
+                  </div>
+              </div>
+              <!-- end of single product -->
           </div>
-
-        <div class="col-lg-4 col-sm-6 col-md-6">
-          <div class="process-block">
-              <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-              <h3>Animal Bedding</h3>
-              <p> Biomass pellets made from materials like sawdust or straw are used as animal bedding in livestock operations. They provide a comfortable and absorbent bedding material that can be easily disposed of and replaced.
-              </p>
-          </div>
-      </div>
-        
-      <div class="col-lg-4 col-sm-6 col-md-6">
-        <div class="process-block">
-            <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-            <h3>Waste Management</h3>
-            <p>Biomass briquettes can be used to efficiently manage agricultural and forestry waste by compacting it into a dense, easy-to-transport form. This reduces waste disposal costs and environmental impacts.
-            </p>
-        </div>
-    </div>
-
-    <div class="col-lg-4 col-sm-6 col-md-6">
-      <div class="process-block">
-          <img src="images/process/process-1.jpg" alt="" class="img-fluid">
-
-          <h3>Furnaces</h3>
-          <p>Our products offer a dependable and sustainable fuel supply and can be used in furnaces for heating and other purposes.
-          </p>
       </div>
   </div>
-      </div> -->
   </section>
 
+ 
 
  <footer class="section " id="footer">
    <div class="overlay footer-overlay"></div>
@@ -674,31 +616,5 @@ article.sample-col-para img {
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
   <script src="plugins/google-map/gmap.js"></script>
   <script src="js/script.js"></script>
-  <script>
-    "use strict";
-const parentMarquee = document.querySelector(".marquee-wrapper");
-const childMarquee = document.querySelector(".marquee-content");
-// will clone the child node of Parent Marquee or copy the sibling 
-const adChildMarquee = document.querySelector(".marquee-content").cloneNode(true);
-parentMarquee.appendChild(adChildMarquee);
-// code below will allow a draggable feature for the marquee carousel 
-const ulParentListContainer = document.querySelector('.marquee-wrapper');
-let isDragging = false;
-const dragStart = (e) => {
-    if (!isDragging)
-        return;
-    ulParentListContainer.scrollLeft -= e.movementX;
-};
-const stopDragging = () => {
-    isDragging = false;
-};
-// when mouse is pressed 
-ulParentListContainer.addEventListener('mousedown', () => isDragging = true);
-// when mouse is move to left
-ulParentListContainer.addEventListener('mousemove', dragStart);
-// when mouse pressed is released
-window.addEventListener('mouseup', stopDragging);
-
-</script>
 </body>
 </html>
