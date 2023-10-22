@@ -262,7 +262,7 @@ img {
 }
 
 a {
-  color: #10672d;
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -270,7 +270,7 @@ a:hover,
 a:focus {
   outline: none;
   text-decoration: none;
-  color: #1a9c5f;
+  color: #cacaca;
 }
 
 /*----------------------
@@ -380,60 +380,37 @@ a:focus {
 /* =========================
 PRELOADER
 =======================*/
-#page-loader {
-  background: #fff;
-  height: 100%;
-  width: 100%;
+
+#preloader {
   position: fixed;
-  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.loader-icon {
-  background: none repeat scroll 0 0 #fff;
-  border-bottom: 3px solid rgba(19, 19, 19, 0.1) !important;
-  border-left: 3px solid rgba(19, 19, 19, 0.1) !important;
-  border-radius: 100px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -o-border-radius: 100px;
-  -ms-border-radius: 100px;
-  border-right: 3px solid #1453F2 !important;
-  border-top: 3px solid rgba(19, 19, 19, 0.1) !important;
-  height: 50px;
-  left: 50%;
-  margin: -20px 0 0 -20px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  width: 50px;
-  transform: translate(-50%, -50%);
+#preloader img {
+  width: 100px;
+  height: 100px;
+  animation: spin 1s infinite linear;
 }
 
-.colored-border {
-  border-color: #fff;
-}
-
-.fa-spin {
-  -webkit-animation: fa-spin 1s infinite linear;
-  animation: fa-spin 1s infinite linear;
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
+@keyframes spin {
+  from {
     transform: rotate(0deg);
   }
-  100% {
-    transform: rotate(359deg);
+  to {
+    transform: rotate(360deg);
   }
 }
-@keyframes fa-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
+
+
+
 /*--------------------------
 PAGE BANNER
 --------------------------*/
@@ -444,7 +421,7 @@ PAGE BANNER
 .page-contact {
   position: relative;
   padding: 180px 0px;
-  background: url("../images/banner/p-6.jpg") fixed 50% 50% no-repeat;
+  background: url("../images/banner/contact.jpg") fixed 50% 50% no-repeat;
   background-size: cover;
 }
 
@@ -465,7 +442,7 @@ PAGE BANNER
 .page-pricing {
   position: relative;
   padding: 180px 0px;
-  background: url("../images/banner/img2.jpg") fixed 50% 50% no-repeat;
+  background: url("../images/banner/register.jpg") fixed 50% 50% no-repeat;
   background-size: cover;
 }
 
@@ -548,7 +525,7 @@ PAGE BANNER
   transition: opacity 0.15s linear;
   opacity: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #10672d;
 }
 
 .dropdown-toggle::after {
@@ -756,7 +733,7 @@ ul.dropdown-menu li {
 
 #banner-3 {
   position: relative;
-  background: url("../images/banner/banner.jpeg") no-repeat;
+  background: url("../images/banner/home.jpeg") no-repeat;
   background-size: cover;
 }
 
@@ -968,7 +945,7 @@ h5.subtitle {
   text-transform: capitalize;
 }
 
-.project-content-block {
+.project-content-block-1 {
   padding: 70px 40px;
   margin-left: -120px;
   background: #F4F7FC;
@@ -977,10 +954,28 @@ h5.subtitle {
   border: 15px solid #fff;
   box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
 }
-.project-content-block h4 {
+
+.project-content-block-2 {
+  padding: 70px 40px;
+  margin-right: -120px;
+  background: #F4F7FC;
+  position: absolute;
+  bottom: -70px;
+  border: 15px solid #fff;
+  box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
+}
+
+.project-content-block-1 h4 {
   color: #10672d;
 }
-.project-content-block p {
+.project-content-block-1 p {
+  margin-top: 25px;
+}
+
+.project-content-block-2 h4 {
+  color: #10672d;
+}
+.project-content-block-2 p {
   margin-top: 25px;
 }
 
@@ -1462,7 +1457,7 @@ CONTACT PAGE
   .section-heading {
     margin-bottom: 30px;
   }
-  .project-content-block {
+  .project-content-block-1 {
     text-align: center;
     margin-left: 0px;
     padding: 70px 20px;
@@ -1470,9 +1465,23 @@ CONTACT PAGE
     bottom: 0px;
     margin-top: 40px;
   }
-  .project-content-block h4 {
+  .project-content-block-1 h4 {
     font-size: 14px;
   }
+
+  .project-content-block-2 {
+    text-align: center;
+    margin-left: 0px;
+    padding: 70px 20px;
+    position: relative;
+    bottom: 0px;
+    margin-top: 40px;
+  }
+  .project-content-block-2 h4 {
+    font-size: 14px;
+  }
+
+  
   .blog-box {
     margin-bottom: 50px;
   }
@@ -1557,7 +1566,7 @@ CONTACT PAGE
   .section-heading {
     margin-bottom: 30px;
   }
-  .project-content-block {
+  .project-content-block-1 {
     text-align: center;
     margin-left: 0px;
     padding: 70px 20px;
@@ -1565,15 +1574,26 @@ CONTACT PAGE
     bottom: 0px;
     margin-top: 40px;
   }
-  .project-content-block h4 {
+  .project-content-block-1 h4 {
+    font-size: 14px;
+  }
+
+  .project-content-block-2 {
+    text-align: center;
+    margin-left: 0px;
+    padding: 70px 20px;
+    position: relative;
+    bottom: 0px;
+    margin-top: 40px;
+  }
+  .project-content-block-2 h4 {
     font-size: 14px;
   }
   .testimonial-heading {
     margin-bottom: 50px;
   }
   .blog-box {
-    margin-bottom: 50px;
-  }
+    margin-bottom
   .footer-copy {
     text-align: center;
   }
@@ -1673,14 +1693,25 @@ CONTACT PAGE
   .section-heading {
     margin-bottom: 30px;
   }
-  .project-content-block {
+  .project-content-block-1 {
     text-align: center;
     margin-left: 0px;
     padding: 70px 20px;
     position: relative;
     bottom: 0px;
   }
-  .project-content-block h4 {
+  .project-content-block-1 h4 {
+    font-size: 14px;
+  }
+
+  .project-content-block-2 {
+    text-align: center;
+    margin-left: 0px;
+    padding: 70px 20px;
+    position: relative;
+    bottom: 0px;
+  }
+  .project-content-block-2 h4 {
     font-size: 14px;
   }
   .testimonial-heading {
@@ -1813,7 +1844,7 @@ CONTACT PAGE
   .section-heading {
     margin-bottom: 30px;
   }
-  .project-content-block {
+  .project-content-block-1 {
     text-align: center;
     margin-left: 0px;
     padding: 70px 20px;
@@ -1821,7 +1852,19 @@ CONTACT PAGE
     bottom: 0px;
     margin-top: 30px;
   }
-  .project-content-block h4 {
+  .project-content-block-1 h4 {
+    font-size: 14px;
+  }
+
+  .project-content-block-2 {
+    text-align: center;
+    margin-left: 0px;
+    padding: 70px 20px;
+    position: relative;
+    bottom: 0px;
+    margin-top: 30px;
+  }
+  .project-content-block-2 h4 {
     font-size: 14px;
   }
   .testimonial-heading {
@@ -1921,3 +1964,191 @@ CONTACT PAGE
   transform: translateX(-100%);
 }
 /*# sourceMappingURL=style.css.map */
+}
+
+
+.chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #10672d;
+  transition: all 0.2s ease;
+}
+body.show-chatbot .chatbot-toggler {
+  transform: rotate(90deg);
+}
+.chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+}
+.chatbot-toggler span:last-child,
+body.show-chatbot .chatbot-toggler span:first-child  {
+  opacity: 0;
+}
+body.show-chatbot .chatbot-toggler span:last-child {
+  opacity: 1;
+}
+.chatbot {
+  position: fixed;
+  right: 35px;
+  bottom: 90px;
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  transform-origin: bottom right;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+  transition: all 0.1s ease;
+}
+body.show-chatbot .chatbot {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.chatbot header {
+  padding: 16px 0;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: #10672d;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.chatbot header span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+header h2 {
+  font-size: 1.4rem;
+}
+.chatbot .chatbox {
+  overflow-y: auto;
+  height: 510px;
+  padding: 30px 20px 100px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+  width: 6px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 25px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+.chatbox .chat {
+  display: flex;
+  list-style: none;
+}
+.chatbox .outgoing {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+.chatbox .incoming span {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  cursor: default;
+  text-align: center;
+  line-height: 32px;
+  align-self: flex-end;
+  background: #10672d;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+}
+.chatbox .chat p {
+  white-space: pre-wrap;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  max-width: 75%;
+  color: #fff;
+  font-size: 0.95rem;
+  background: #10672d;
+}
+.chatbox .incoming p {
+  border-radius: 10px 10px 10px 0;
+}
+.chatbox .chat p.error {
+  color: #721c24;
+  background: #f8d7da;
+}
+.chatbox .incoming p {
+  color: #000;
+  background: #f2f2f2;
+}
+.chatbot .chat-input {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 3px 20px;
+  border-top: 1px solid #ddd;
+}
+.chat-input textarea {
+  height: 55px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  max-height: 180px;
+  padding: 15px 15px 15px 0;
+  font-size: 0.95rem;
+}
+.chat-input span {
+  align-self: flex-end;
+  color: #10672d;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  font-size: 1.35rem;
+}
+.chat-input textarea:valid ~ span {
+  visibility: visible;
+}
+
+@media (max-width: 490px) {
+  .chatbot-toggler {
+    right: 20px;
+    bottom: 20px;
+  }
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+  .chatbot .chatbox {
+    height: 90%;
+    padding: 25px 15px 100px;
+  }
+  .chatbot .chat-input {
+    padding: 5px 15px;
+  }
+  .chatbot header span {
+    display: block;
+  }
+}
+
+
