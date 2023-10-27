@@ -1,6 +1,6 @@
 <h1>BioStack</h1>
 
-<img width="2018" alt="Resolving Problems Chart" src="https://github.com/tarunbisht-24/biostack/assets/77788209/a3dcd4b5-68e3-461e-b3dc-0c986c21db11"><h1>BioStack</h1>
+<img width="2018" alt="Resolving Problems Chart" src="https://github.com/tarunbisht-24/biostack/assets/77788209/a3dcd4b5-68e3-461e-b3dc-0c986c21db11">
 
 <img width="3680" alt="Flowchart" src="https://github.com/tarunbisht-24/biostack/assets/77788209/783be461-7851-48c4-8165-93f0647d68c3">
 
